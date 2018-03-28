@@ -1,0 +1,45 @@
+$fa-font-path:        "../fonts" !default;
+$fa-version:          "1.0" !default;
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('#{$fa-font-path}/fontawesome-webfont.eot?v=#{$fa-version}');
+  src: url('#{$fa-font-path}/fontawesome-webfont.eot?#iefix&v=#{$fa-version}') format('embedded-opentype'),
+    url('#{$fa-font-path}/fontawesome-webfont.woff2?v=#{$fa-version}') format('woff2'),
+    url('#{$fa-font-path}/fontawesome-webfont.woff?v=#{$fa-version}') format('woff'),
+    url('#{$fa-font-path}/fontawesome-webfont.ttf?v=#{$fa-version}') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Whitney';
+  src: url('#{$fa-font-path}/WhitneyHTF-Light.eot?v=#{$fa-version}');
+  src: url('#{$fa-font-path}/WhitneyHTF-Light.eot?#iefix&v=#{$fa-version}') format('embedded-opentype'),
+    url('#{$fa-font-path}/WhitneyHTF-Light.woff?v=#{$fa-version}') format('woff'),
+    url('#{$fa-font-path}/WhitneyHTF-Light.ttf?v=#{$fa-version}') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Whitney';
+  src: url('#{$fa-font-path}/WhitneyHTF-Medium.eot?v=#{$fa-version}');
+  src: url('#{$fa-font-path}/WhitneyHTF-Medium.eot?#iefix&v=#{$fa-version}') format('embedded-opentype'),
+    url('#{$fa-font-path}/WhitneyHTF-Medium.woff?v=#{$fa-version}') format('woff'),
+    url('#{$fa-font-path}/WhitneyHTF-Medium.ttf?v=#{$fa-version}') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WhitneyItalic';
+  src: url('#{$fa-font-path}/WhitneyHTF-LightItalic.eot?v=#{$fa-version}');
+  src: url('#{$fa-font-path}/WhitneyHTF-LightItalic.eot?#iefix&v=#{$fa-version}') format('embedded-opentype'),
+    url('#{$fa-font-path}/WhitneyHTF-LightItalic.woff?v=#{$fa-version}') format('woff'),
+    url('#{$fa-font-path}/WhitneyHTF-LightItalic.ttf?v=#{$fa-version}') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}

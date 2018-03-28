@@ -1,0 +1,252 @@
+/* Navigation breakpoints */
+
+header {
+  background: #f7f7f7;
+  position: relative;
+  z-index: 999;  
+
+
+  #logo {
+    float: left;
+      margin: 30px;  
+  }
+
+  @include breakpoint(small only) {
+        #logo-text {
+          display: none;
+        }
+
+        #logo { 
+          margin: 0 0 15px;
+          padding: 5px;
+          position: relative;
+          top: 9px;
+          left: -10px;
+         }
+  }
+
+}
+
+// Override Foundation display
+#site-navigation {
+  display: block !important;
+}
+
+// .top-bar-right is also used for desktop, turn it back on
+#menu-mobile {
+  @include breakpoint(small) {
+    display: none;
+  }  
+
+  @include breakpoint(medium) {
+    display: block; 
+  }
+}
+
+
+body.home {
+  background: #000;
+}
+
+
+.menu-icon::after {
+    background: rgba(0,0,0,1);
+    box-shadow: 0 7px 0 rgba(0,0,0,0.9), 0 14px 0 rgba(0,0,0,0.9);
+}
+
+.desktop-menu, .top-bar-left {
+  @include show-for(medium);
+}
+
+.top-bar {
+  background: rgba(202, 202, 202, 0.2);
+}
+
+.top-bar {
+  background: #fbfbfb;
+
+  ul {
+      background: transparent;
+      background-color: #fbfbfb;
+      width:100%;
+      float:right;
+      > li {
+        text-align: right;
+      }
+
+    }
+}
+
+
+.top-bar-left  {
+  
+  a {
+    display:block;
+    float:left;
+  }
+
+  #logo-text {
+    
+    @include breakpoint(small) {
+      display: none;
+    }
+    
+    @include breakpoint(large) {
+      display: block;
+      height:100%;
+      float:left;
+    }
+  }
+
+}
+
+.title-bar {
+  @include breakpoint(small only) {
+    border-bottom: 1px solid rgba(102, 102, 102, 0.66);
+    height:54px;
+  }
+}
+
+#mobile-menu, .title-bar {
+  @include hide-for(medium);
+  background: #fbfbfb;
+  line-height: rem-calc(50);
+
+  .menu-icon {
+    float:right;
+    margin-top: 17px;
+    margin-right: 15px;
+  }
+}
+
+/* Tablet and desktop menu */
+.top-bar {
+
+  .menu .home a {
+    font-size: rem-calc(22);
+    color: $black;
+    font-weight: 200;
+    text-transform:uppercase;
+
+    &:hover {
+      cursor:pointer;
+    }
+  }
+
+  .top-bar-right {
+    @include breakpoint(medium) {
+      margin-right: rem-calc(40);
+    }
+  }
+  .menu .active > a {
+     background-color: transparent !important;
+     font-weight: bold;
+  }
+  
+  .menu a {
+
+     font-family: "Whitney";
+
+     @include breakpoint(small only) {
+      height: rem-calc(40);
+      line-height: rem-calc(40);
+      padding: 0 rem-calc(15) 0 rem-calc(40);
+      font-weight: 300;
+      font-size: rem-calc(14);      
+    }
+
+    @include breakpoint(medium) {
+      height: rem-calc(100);
+      line-height: rem-calc(100);
+      padding: 0 25px 0 25px;
+      font-weight: 300;
+      font-size: rem-calc(16);      
+    }
+    color: $black;
+
+    text-transform:uppercase;
+
+
+    //&:hover:not(.button) {
+     // background-color: #2a2a2a;
+   // }
+  }
+
+@include breakpoint(small only) {
+.top-bar-right {
+    a:hover:not(.button) {
+      //background-color: rgba(202, 202, 202, 0.2);
+    }
+  }
+}
+
+@include breakpoint(medium) {
+.top-bar-right {
+    a:hover:not(.button) {
+      //color: $dark-gray;
+    }
+  }
+}
+
+  //.menu>li:not(.menu-text)>a { padding: 1rem; }
+  //.menu li:not(:last-child) { border-right: 1px solid #4e4e4e; }
+
+  .dropdown.menu .submenu {
+    background-color: rgba(202, 202, 202, 0.2);
+    color: #e6e6e6;
+    border: 0;
+  }
+
+  .dropdown.menu .has-submenu.is-down-arrow a { padding-right: 1rem; }
+  .dropdown.menu .has-submenu.is-down-arrow > a::after { border: 0; }
+
+  .dropdown.menu:first-child >
+    li.is-dropdown-submenu-parent >
+    a::after {
+      display: none;
+    }
+
+}
+/* Basic styles for post navigation. Nicolas Gallagher's "Micro clearfix" https://css-tricks.com/snippets/css/clear-fix/ */
+.post-navigation:before,
+.post-navigation:after {
+	content: "";
+    	display: table;
+}
+.post-navigation:after {
+	clear:both;
+}
+/* Text meant only for screen readers. Addresses part of theme-check issue #840. https://github.com/Automattic/_s/blob/master/style.css */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+.nav-previous {
+	float:left;
+}
+.nav-next {
+	float:right;
+}
