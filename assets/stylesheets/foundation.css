@@ -4567,6 +4567,25 @@ section.featured-work {
         text-transform: uppercase;
         font-weight: bold; }
 
+.home .video {
+  position: relative; }
+  .home .video .child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 999; }
+    .home .video .child h1 {
+      text-align: center;
+      width: 100%;
+      margin: 0 auto;
+      display: block;
+      font-weight: 700;
+      color: #fff;
+      max-width: 800px; }
+
 a:hover {
   -webkit-transition: all 0.3s;
   transition: all 0.3s; }

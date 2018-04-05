@@ -1,4 +1,39 @@
+.home {
 
+// Parent
+.video {
+
+position:relative;
+
+
+	//Child
+	.child {
+
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		  z-index:999;
+
+		h1 {
+			text-align:center;
+			width:100%;
+			margin:0 auto;
+			display: block;
+			font-weight: 700;
+			color: #fff;
+			max-width:800px;
+		}
+
+	}
+
+
+
+
+}
+
+
+}
 
 
 
