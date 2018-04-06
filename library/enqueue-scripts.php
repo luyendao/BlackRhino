@@ -13,7 +13,7 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	function foundationpress_scripts() {
 
 	// Enqueue the main Stylesheet.
-	wp_enqueue_style( 'main-stylesheet', get_template_directory_uri() . '/assets/stylesheets/foundation.css', array(), '2.6.1', 'all' );
+	wp_enqueue_style( 'main-stylesheet', get_template_directory_uri() . '/assets/stylesheets/foundation.css', array(), '2.6.2', 'all' );
 
 	//wp_enqueue_style( 'lightslider-styles', '//sachinchoolur.github.io/lightslider/dist/css/lightslider.css', array(), '2.6.1', 'all' );
 
@@ -22,11 +22,14 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	// Deregister the jquery versionsl bundled with WordPress.
 	wp_deregister_script( 'jquery' );
 
+	if ( is_singular() ) {
 	// CDN hosted jQuery placed in the header, as some plugins require that jQuery is loaded in the header.
 	wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js', array(), '2.1.0', false );
 
 	// Vimeo Player API 
 	wp_enqueue_script( 'vimeo-api', '//player.vimeo.com/api/player.js', array(), '2.1.0', false );
+
+	}
 
 	wp_enqueue_script( 'velocity', get_template_directory_uri() . '/assets/javascript/vendor/velocity.min.js', array('jquery'), '2.6.1', false );
 
